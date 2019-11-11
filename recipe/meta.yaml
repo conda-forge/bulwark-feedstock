@@ -1,5 +1,5 @@
 {% set name = "bulwark" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bb100ceed08cdb89d74300695110b0533296ebc2b712bee2f7e168103abd1a19
+  sha256: 1a8b1deb72fe6493f6ecbef2e69bd2f6ba0651c263dd5ab41adbd382cfe0099b
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
