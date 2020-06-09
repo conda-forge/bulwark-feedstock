@@ -32,13 +32,13 @@ test:
 
 about:
   home: https://github.com/zaxr/bulwark
-  license: GPL-3.0
-  license_family: GPL
+  license: LGPL-3.0-only
+  license_family: LGPL
   license_file: LICENSE
   summary: A python package for defensive data analysis
   description: |
     Bulwark is a package for convenient property-based testing of pandas
-    dataframes, supported for Python 3.5+.
+    dataframes, supported for Python 3.6+.
   doc_url: https://bulwark.readthedocs.io/
   dev_url: https://github.com/zaxr/bulwark
 
