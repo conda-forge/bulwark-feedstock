@@ -1,5 +1,5 @@
 {% set name = "bulwark" %}
-{% set version = "0.5.3" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,22 +7,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1a8b1deb72fe6493f6ecbef2e69bd2f6ba0651c263dd5ab41adbd382cfe0099b
+  sha256: 18a61b1f7bb5af6495551a4381e9f511d6c4daf09c168e00f88a81d7f8bb143f
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
-    - python >=3.5
+    - python >=3.6
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
     - setuptools
   run:
-    - python >=3.5
+    - python >=3.6
     - pandas
     - numpy
 
@@ -32,13 +32,13 @@ test:
 
 about:
   home: https://github.com/zaxr/bulwark
-  license: GPL-3.0
-  license_family: GPL
+  license: LGPL-3.0-only
+  license_family: LGPL
   license_file: LICENSE
   summary: A python package for defensive data analysis
   description: |
     Bulwark is a package for convenient property-based testing of pandas
-    dataframes, supported for Python 3.5+.
+    dataframes, supported for Python 3.6+.
   doc_url: https://bulwark.readthedocs.io/
   dev_url: https://github.com/zaxr/bulwark
 
